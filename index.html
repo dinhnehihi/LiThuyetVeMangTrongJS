@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xin chào</title>
+</head>
+<body>
+<script type="text/javascript">
+    // Khai báo mảng sử dụng cách 1
+    let hello1 = ["Định", 14, 2007];
+    console.log(hello1);
+    for (let i = 0; i < 3; i++) {
+        console.log(hello1[i]);
+    }
+    console.log("================");
+    // Khai báo mảng sử dụng cách 2
+    let hello2 = new Array("Linh", 17, 2004);
+    console.log(hello2);
+    for (let i = 0; i < 3; i++) {
+        console.log(hello2[i]);
+    }
+    console.log("================");
+    // Sử dụng hàm join
+    console.log(hello1.join());
+    console.log(hello2.join('-'));
+    console.log("================");
+    // Đếm số phần tử mảng sử dụng thuộc tính length
+    let hello3 = ["hmmm", "hi", 999];
+    console.log("Độ dài của mảng ======>", hello3.length);
+    console.log("================");
+    // Sử dụng vòng lặp for kết hợp với thuộc tính length
+    let hello4 = [1, 2, 3];
+    for (let i = 0; i < hello4.length; i++) {
+        console.log("i = ", i);
+        console.log("hello4[i] ======>", hello4[i]);
+    }
+    console.log("================");
+    // Sử dụng vòng lặp while kết hợp với thuộc tính length
+    let hello5 = [2007, 2004, 2022];
+    let hmm = 0;
+    while (hmm < hello5.length) {
+        console.log("i = ", hmm);
+        console.log("hello5[i] ======>", hello5[hmm]);
+        hmm++;
+    }
+    console.log("================");
+    // Sử dụng hàm push() (thêm phần tử vào cuối mảng)
+    let xinChao = ["Hi", "Hello", "Bonjour"];
+    xinChao.push("Yo, bitch!");
+    console.log(xinChao[xinChao.length - 1]);
+    console.log("================");
+    //Sử dụng hàm unshift() (thêm phần tử vào đầu mảng)
+    let myPersonalInformation = ["Dinh", 14, 2007, "Dak Nong Province"];
+    myPersonalInformation.unshift("Viet Nam");
+    console.log("I'm living in: ", myPersonalInformation[0]);
+    console.log(myPersonalInformation.join(", "));
+    console.log("================");
+    // Sử dụng hàm shift() (xóa phần tử ở đầu mảng)
+    let hello6 = [13, 25, 49];
+    console.log("Phần tử đầu tiên của mảng trước khi xóa ======>", hello6[0]);
+    hello6.shift();
+    console.log("Phần tử đầu tiên của mảng sau khi xóa ======>", hello6[0]);
+    // Sử dụng hàm pop() (xóa phần tử ở cuối mảng)
+    let hello7 = ["Xin chào", "yay", 11];
+    console.log("Phần tử cuối cùng của mảng trước khi xóa ======>", hello7[hello7.length - 1]);
+    hello7.pop();
+    console.log("Phần tử cuối cùng của mảng sau khi xóa ======>", hello7[hello7.length - 1]);
+    console.log("================");
+    // Sử dụng hàm sort() (trường hợp 1)
+    let randomAlphabeticalOrder = ["b", "c", "a"];
+    console.log("Thứ tự các phần từ trong hàm trước khi sắp xếp =======> ", randomAlphabeticalOrder);
+    console.log("Thứ tự các phần từ trong hàm sau khi sắp xếp =======>", randomAlphabeticalOrder.sort());
+    console.log("Thứ tự các phần từ trong hàm sau khi sắp xếp nhưng bị đảo ngược=======>", randomAlphabeticalOrder.reverse());
+    console.log("================");
+    // Sử dụng hàm sort() (trường hợp 2)
+    let randomNumericalOrder = [3, 9, 7];
+    console.log("Thứ tự các phần từ trong hàm trước khi sắp xếp =======> ", randomNumericalOrder);
+    randomNumericalOrder.sort(function (a, b) {
+        return a - b
+        // return b - a
+    })
+    console.log("Thứ tự các phần từ trong hàm sau khi sắp xếp =======> ", randomNumericalOrder.sort());
+</script>
+</body>
+</html>
+
+
+
